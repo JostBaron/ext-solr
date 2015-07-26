@@ -524,7 +524,7 @@ class Tx_Solr_Template {
 					$value['content'] = $this->escapeResultContent($value['content']);
 				}
 				if (isset($value['title'])) {
-					$value['title'] = htmlspecialchars($value['title'], NULL, NULL, FALSE);
+					$value['title'] = $this->escapeResultContent($value['title']);
 				}
 
 				$resolvedMarkers = $this->resolveVariableMarkers($foundMarkers, $value);
